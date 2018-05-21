@@ -3,19 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>栗靖伟的前端工程师简历</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <script src="http://at.alicdn.com/t/font_643702_cmovubwar98gp66r.js"></script>
     <style type="text/css">
-    .icon {
-       width: 1em; height: 1em;
-       vertical-align: -0.15em;
-       fill: currentColor;
-       overflow: hidden;
+    .icon { width: 1em; height: 1em; vertical-align: -0.15em; fill: currentColor; overflow: hidden; }
+    .site-welcome { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #888;
+      z-index: 10; justify-content: center; align-items: center;
     }
+    .site-welcome.active { display: flex; }
+    
+    .loading { width: 200px; height: 200px; border: 1px solid red; position: relative; z-index: 12;}
+    .loading::before,.loading::after { position: absolute; content: ''; width: 0px; height: 0px; background-color: #333; border-radius: 50%; margin: auto; left: 0; right: 0; top: 0; bottom: 0; animation: s 2s infinite; }
+    .loading::after { animation-delay: 1s;}
+
+    @keyframes s {
+      0% { width: 0px; height: 0px; opacity: 1; }
+      100% { width: 100px; height: 100px; opacity: 0; }
+    }
+
 </style>
 </head>
 <body>
+    <div id="siteWelcome" class="site-welcome active">
+        <div class="loading"></div>
+    </div>
     <div class="wrapper">
+        
         <div class="topNavBar">
             <div class="topNavBar-inner clearfix">
                 <a class="logo" href="">
@@ -176,5 +189,10 @@
 
 
     </div>
+
+
+    <script>
+        siteWelcome.classList.remove('active')
+    </script>
 </body>
 </html>
