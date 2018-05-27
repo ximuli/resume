@@ -24,22 +24,30 @@
 </style>
 </head>
 <body>
-    <div id="siteWelcome" class="site-welcome active">
-        <div class="loading"></div>
-    </div>
+    
     <div class="wrapper">
-        
-        <div class="topNavBar">
+        <div id="siteWelcome" class="site-welcome active">
+            <div class="loading"></div>
+        </div>
+
+        <div id="topNavBar" class="topNavBar">
             <div class="topNavBar-inner clearfix">
                 <a class="logo" href="">
                     <span class="rs">RS</span>
                     <span class="card">card</span>
                 </a>
-                <nav>
+                <nav class="menu">
                     <ul class="clearfix">
-                        <li><a href="">关于</a></li>
-                        <li><a href="">技能</a></li>
-                        <li><a href="">作品</a></li>
+                        <li><a href="#siteAbout">关于</a></li>
+                        <li><a href="#siteSkills">技能</a></li>
+                        <li>
+                            <a href="#siteWorks">作品</a>
+                            <ul class="submenu">
+                                <li><a href="">作品1</a></li>
+                                <li><a href="">作品2</a></li>
+                                <li><a href="">作品3</a></li>
+                            </ul>
+                        </li>
                         <li><a href="">博客</a></li>
                         <li><a href="">日历</a></li>
                         <li><a href="">联系方式</a></li>
@@ -50,7 +58,7 @@
         </div>
         <div class="banner"><div class="mask"></div></div>
         <main>
-                <div class="userCard">
+                <div id="siteAbout" class="userCard">
                     <div class="pictureAndText clearfix">
                         <div class="picture">
                             <img src="img/avatar.jpg" alt="头像">
@@ -107,7 +115,7 @@
                     技能：前端开发，网页设计，UI设计。
                 </p>
             </main>
-            <section class="skills">
+            <section id="siteSkills" class="skills">
                     <h2>技能</h2>
                     <ol class="clearfix">
                         <li>
@@ -149,7 +157,7 @@
                         
                     </ol>
             </section>
-            <section class="portfolio">
+            <section id="siteWorks" class="portfolio">
                 <h2>作品集</h2>
                 <nav>
                     <ol>
@@ -191,11 +199,6 @@
     </div>
 
 
-    <script>
-        setTimeout(function() {
-            siteWelcome.classList.remove('active')
-        },1000)
-        
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
