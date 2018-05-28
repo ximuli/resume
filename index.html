@@ -22,13 +22,14 @@
     }
 
 </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
 </head>
 <body>
     
     <div class="wrapper">
-        <div id="siteWelcome" class="site-welcome active">
+        <!-- <div id="siteWelcome" class="site-welcome active">
             <div class="loading"></div>
-        </div>
+        </div> -->
 
         <div id="topNavBar" class="topNavBar">
             <div class="topNavBar-inner clearfix">
@@ -58,7 +59,7 @@
         </div>
         <div class="banner"><div class="mask"></div></div>
         <main>
-                <div id="siteAbout" class="userCard">
+                <div data-x id="siteAbout" class="userCard">
                     <div class="pictureAndText clearfix">
                         <div class="picture">
                             <img src="img/avatar.jpg" alt="头像">
@@ -115,49 +116,49 @@
                     技能：前端开发，网页设计，UI设计。
                 </p>
             </main>
-            <section id="siteSkills" class="skills">
+            <section data-x id="siteSkills" class="skills">
                     <h2>技能</h2>
                     <ol class="clearfix">
                         <li>
                             <h3>HTML5 &amp; CSS3</h3>
                             <div class="progressBar">
-                                <div class="progress"></div>
+                                <div style="width: 60%;" class="progress"></div>
                             </div>
                         </li>
                         <li>
                             <h3>JavaScript</h3>
                             <div class="progressBar">
-                                <div class="progress"></div>
+                                <div style="width: 80%;" class="progress"></div>
                             </div>
                         </li>
                         <li>
                             <h3>jQuery</h3>
                             <div class="progressBar">
-                                <div class="progress"></div>
+                                <div style="width: 80%;" class="progress"></div>
                             </div>
                         </li>
                         <li>
                             <h3>Vue</h3>
                             <div class="progressBar">
-                                <div class="progress"></div>
+                                <div style="width: 60%;" class="progress"></div>
                             </div>
                         </li>
                         <li>
                             <h3>React</h3>
                             <div class="progressBar">
-                                <div class="progress"></div>
+                                <div style="width: 80%;" class="progress"></div>
                             </div>
                         </li>
                         <li>
                             <h3>HTTP</h3>
                             <div class="progressBar">
-                                <div class="progress"></div>
+                                <div style="width: 90%;" class="progress"></div>
                             </div>
                         </li>
                         
                     </ol>
             </section>
-            <section id="siteWorks" class="portfolio">
+            <section data-x id="siteWorks" class="portfolio">
                 <h2>作品集</h2>
                 <nav>
                     <ol>
