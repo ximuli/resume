@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>栗靖伟的前端工程师简历</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
     <link rel="stylesheet" href="./style.css">
     <script src="http://at.alicdn.com/t/font_643702_cmovubwar98gp66r.js"></script>
     <style type="text/css">
@@ -23,14 +24,11 @@
 
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
 </head>
 <body>
     
     <div class="wrapper">
-        <!-- <div id="siteWelcome" class="site-welcome active">
-            <div class="loading"></div>
-        </div> -->
-
         <div id="topNavBar" class="topNavBar">
             <div class="topNavBar-inner clearfix">
                 <a class="logo" href="">
@@ -59,147 +57,145 @@
         </div>
         <div class="banner"><div class="mask"></div></div>
         <main>
-                <div data-x id="siteAbout" class="userCard">
-                    <div class="pictureAndText clearfix">
-                        <div class="picture">
-                            <img src="img/avatar.jpg" alt="头像">
-                        </div>
-                        <div class="text">
-                            <div class="profile">
-                                <span class="welcome">Hello<span class="triangle"></span></span>
-                                <h1>栗靖伟</h1>
-                                <p>前端开发工程师</p>
-                                <hr>
-                                <dl >
-                                    <dt>年龄</dt>
-                                    <dd>25</dd>
-                                    <dt>所在城市</dt>
-                                    <dd>郑州</dd>
-                                    <dt>邮箱</dt>
-                                    <dd>ximuli666@163.com</dd>
-                                    <dt>手机</dt>
-                                    <dd>1234567890</dd>
-                                </dl>
-                            </div>
+            <div data-x id="siteAbout" class="userCard">
+                <div class="pictureAndText clearfix">
+                    <div class="picture">
+                        <img src="img/avatar.jpg" alt="头像">
+                    </div>
+                    <div class="text">
+                        <div class="profile">
+                            <span class="welcome">Hello<span class="triangle"></span></span>
+                            <h1>栗靖伟</h1>
+                            <p>前端开发工程师</p>
+                            <hr>
+                            <dl >
+                                <dt>年龄</dt>
+                                <dd>25</dd>
+                                <dt>所在城市</dt>
+                                <dd>郑州</dd>
+                                <dt>邮箱</dt>
+                                <dd>ximuli666@163.com</dd>
+                                <dt>手机</dt>
+                                <dd>1234567890</dd>
+                            </dl>
                         </div>
                     </div>
-                    <footer class="media">
-                        <a href="#">
-                            <svg class="icon" aria-hidden="true">
-                                <use xlink:href="#icon-github"></use>
-                            </svg>
-                        </a>
-                        <a href="#">
-                            <svg class="icon" aria-hidden="true">
-                                <use xlink:href="#icon-zhihu0"></use>
-                            </svg>
-                        </a>
-                        <a href="#">
-                            <svg class="icon" aria-hidden="true">
-                                <use xlink:href="#icon-email"></use>
-                            </svg>
-                        </a>
-                        <a href="#">
-                            <svg class="icon" aria-hidden="true">
-                                <use xlink:href="#icon-weibo"></use>
-                            </svg>
-                        </a>
-                    </footer>
                 </div>
-                <p class="downloadResume-wrapper">
-                    <a class="downloadResume" href="./resume.pdf" target="_blank" download>下载PDF简历</a>
-                </p>
+                <footer class="media">
+                    <a href="#">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-github"></use>
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-zhihu0"></use>
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-email"></use>
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-weibo"></use>
+                        </svg>
+                    </a>
+                </footer>
+            </div>
+            <p class="downloadResume-wrapper">
+                <a class="downloadResume" href="./resume.pdf" target="_blank" download>下载PDF简历</a>
+            </p>
+            
+            <p class="selfIntroduction">
+                栗靖伟，前端开发工程师，UI设计师。
+                <br>
+                技能：前端开发，网页设计，UI设计。
+            </p>
+        </main>
+        <section data-x id="siteSkills" class="skills">
+            <h2>技能</h2>
+            <ol class="clearfix">
+                <li>
+                    <h3>HTML5 &amp; CSS3</h3>
+                    <div class="progressBar">
+                        <div style="width: 60%;" class="progress"></div>
+                    </div>
+                </li>
+                <li>
+                    <h3>JavaScript</h3>
+                    <div class="progressBar">
+                        <div style="width: 80%;" class="progress"></div>
+                    </div>
+                </li>
+                <li>
+                    <h3>jQuery</h3>
+                    <div class="progressBar">
+                        <div style="width: 80%;" class="progress"></div>
+                    </div>
+                </li>
+                <li>
+                    <h3>Vue</h3>
+                    <div class="progressBar">
+                        <div style="width: 60%;" class="progress"></div>
+                    </div>
+                </li>
+                <li>
+                    <h3>React</h3>
+                    <div class="progressBar">
+                        <div style="width: 80%;" class="progress"></div>
+                    </div>
+                </li>
+                <li>
+                    <h3>HTTP</h3>
+                    <div class="progressBar">
+                        <div style="width: 90%;" class="progress"></div>
+                    </div>
+                </li>
                 
-                <p class="selfIntroduction">
-                    栗靖伟，前端开发工程师，UI设计师。
-                    <br>
-                    技能：前端开发，网页设计，UI设计。
-                </p>
-            </main>
-            <section data-x id="siteSkills" class="skills">
-                    <h2>技能</h2>
-                    <ol class="clearfix">
-                        <li>
-                            <h3>HTML5 &amp; CSS3</h3>
-                            <div class="progressBar">
-                                <div style="width: 60%;" class="progress"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <h3>JavaScript</h3>
-                            <div class="progressBar">
-                                <div style="width: 80%;" class="progress"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <h3>jQuery</h3>
-                            <div class="progressBar">
-                                <div style="width: 80%;" class="progress"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <h3>Vue</h3>
-                            <div class="progressBar">
-                                <div style="width: 60%;" class="progress"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <h3>React</h3>
-                            <div class="progressBar">
-                                <div style="width: 80%;" class="progress"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <h3>HTTP</h3>
-                            <div class="progressBar">
-                                <div style="width: 90%;" class="progress"></div>
-                            </div>
-                        </li>
-                        
-                    </ol>
-            </section>
-            <section data-x id="siteWorks" class="portfolio">
-                <h2>作品集</h2>
-                <nav>
-                    <ol>
-                        <li id="portfolio1">所有</li>
-                        <li id="portfolio2">框架</li>
-                        <li id="portfolio3">原生JS &amp; CSS</li>
-                    </ol>
-                    <div id="portfolioBar" class="bar state-1">
-                        <div class="bar-inner"></div>
-                    </div>
-                </nav>
-
-                <script>
-                  portfolio1.onclick= function(){
-                    portfolioBar.className = 'bar state-1'
-                  }
-                  portfolio2.onclick= function(){
-                    portfolioBar.className = 'bar state-2'
-                  }
-                  portfolio3.onclick= function(){
-                    portfolioBar.className = 'bar state-3'
-                  }
-                </script>
-
-                <div class="works" style="height: 597px;">
-                    <div class="big" style="left: 0; top: 0;">
-                        <img src="./img/portfolio1.jpg" alt="">
-                    </div>
-                    <div class="small" style="top: 0; left: 645px;">
-                        <img src="./img/portfolio2.jpg" alt="">
-                    </div>
-                    <div class="small" style="top: 298px; left: 645px;">
-                        <img src="./img/portfolio3.jpg" alt="">
-                    </div>
+            </ol>
+        </section>
+        <section data-x id="siteWorks" class="portfolio">
+            <h2>作品集</h2>
+            <!-- Slider main container -->
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <img class="swiper-slide" src="./img/nav-demo.jpg" alt="作品-自定义导航">
+                    <img class="swiper-slide" src="./img/canvas-demo.jpg" alt="作品-canvas画板">
+                    <img class="swiper-slide" src="./img/slide-demo.jpg" alt="作品-轮播">
                 </div>
-            </section>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
 
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+            </div>
+        </section>
 
     </div>
 
-
     <script src="main.js"></script>
+    <script>
+        var mySwiper = new Swiper ('.swiper-container', {
+            // Optional parameters
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+              el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+          })
+    </script>
 </body>
 </html>
