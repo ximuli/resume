@@ -1,14 +1,32 @@
 !function() {
-	//导航 鼠标移入展现二级菜单
-	let liTags = document.querySelectorAll('.topNavBar nav > ul > li')
-	for (let i = 0; i < liTags.length; i++) {
-	    liTags[i].onmouseenter = function (x) {
-	        x.currentTarget.classList.add('active')
-	    }
+	var view = document.querySelector('#topNavBar')
+	var controller = {
+		view: null,
+		init: function(view) {
+			this.view = view
+            this.bindEvents()
+		},
+		bindEvents: function() {
+			var view = this.view
+			let liTags = view.querySelectorAll('nav > ul > li')
+			for (let i = 0; i < liTags.length; i++) {
+			    liTags[i].onmouseenter =  (x) => {
+			        this.active(x)
+			    }
 
-	    liTags[i].onmouseleave = function(x) {
-	        x.currentTarget.classList.remove('active')
-	    }
+			    liTags[i].onmouseleave = (x) => {
+			        this.deactive(x)
+			    }
+			}
+		},
+		active: function(x) {
+            x.currentTarget.classList.add('active')
+		},
+		deactive: function(x) {
+            x.currentTarget.classList.remove('active')
+		}
 	}
+	
+	controller.init(view)
 
 }.call()
