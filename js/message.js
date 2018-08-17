@@ -31,7 +31,7 @@
     	init: function(view, model) {
     		this.view = view
     		this.model = model
-    		
+
     		this.messageList = view.querySelector('#messageList')
     		this.form = view.querySelector('#postMessage')
     		this.model.init()
@@ -51,7 +51,7 @@
 		    )
     	},
     	bindEvents: function() {
-			this.form.addEventListener('submit', function(e) {
+			this.form.addEventListener('submit', (e) => {
 				e.preventDefault()
 				this.saveMessage()
 			})
