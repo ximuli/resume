@@ -159,14 +159,30 @@
             </div>
         </section>
 
+        <section class="messageBoard">
+            <h2>留言板</h2>
+            <ol id="messageList">
+                
+            </ol>
+            <form id="postMessage" style="width: 700px; margin: 50px;">
+                <label for="name">你的名字：</label><input type="text" id="name" name="name">
+                <label for="content">内容：</label> <input type="text" id="content" name="content">
+                <input type="submit">
+            </form>
+        </section>
+
+
+
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.10.0/dist/av-min.js"></script>
     <!-- 模块化 -->
     <script src="./js/init-swiper.js"></script>
     <script src="./js/auto-slide-up.js"></script>
     <script src="./js/stiky-topbar.js"></script>
     <script src="./js/smoothly-navigation.js"></script>
     <script src="./js/hover-submenu.js"></script>
+    <script src="./js/message.js"></script>
 </body>
 </html>
