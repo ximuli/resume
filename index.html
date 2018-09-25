@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
     <link rel="stylesheet" href="./style.css">
     <script src="http://at.alicdn.com/t/font_643702_cmovubwar98gp66r.js"></script>
+    <script src="./js/lib/Scrollreveal.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -36,7 +37,7 @@
         </div>
         <div class="banner"><div class="mask"></div></div>
         <main>
-            <div id="siteAbout" class="userCard">
+            <div id="siteAbout" class="userCard load-hidden">
                 <div class="pictureAndText clearfix">
                     <div class="picture">
                         <img src="img/avatar.jpg" alt="头像">
@@ -219,5 +220,14 @@
     <script src="./js/smoothly-navigation.js"></script>
     <script src="./js/hover-submenu.js"></script>
     <script src="./js/message.js"></script>
+    <script type="text/javascript">
+      var slideUp = {
+        distance: '150%',
+        origin: 'bottom',
+        opacity: null
+      };
+      ScrollReveal().reveal('.userCard', slideUp);
+      ScrollReveal().reveal('section', slideUp);
+    </script>
 </body>
 </html>
