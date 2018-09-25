@@ -18,12 +18,12 @@
         scrollToElement: function(element) {
             let top = element.offsetTop  // 元素到页面顶部的距离
             let currentTop = window.scrollY
-            let targetTop = top - 80
+            let targetTop = top - 120
             let s = targetTop - currentTop
             var coords = { y: currentTop }; // Start at (0, 0)
             var t = Math.abs((s/100)*300)
             if (t>500) { t = 500 }
-            var tween = new TWEEN.Tween(coords) 
+            var tween = new TWEEN.Tween(coords)
                 .to({ y: targetTop }, )
                 .easing(TWEEN.Easing.Quadratic.InOut)
                 .onUpdate(function() {
@@ -48,5 +48,3 @@
     controller.init(view)
 
 }.call()
-
-

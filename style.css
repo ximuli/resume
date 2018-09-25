@@ -1,69 +1,60 @@
 body { background: #efefef; margin: 0; }
-* { margin: 0; padding: 0;}
+* { margin: 0; padding: 0; box-sizing: border-box;}
 hr{ height: 0; border: none; border-top: 1px solid #DEDEDE; }
 ul,ol { list-style: none; }
 h1,h2,h3,h4,h5,h6{ font-weight: normal;}
 .clearfix:after { content: ""; display: block; clear: both;}
 a { color: inherit; text-decoration: none;}
 
-[data-x].active { outline: 10px solid red; }
-[data-x].offset { transform: translateY(200px); opacity: 0.2;}
-
-[data-x] {
-  transform: translateY(0);
-  transition: all .5s;
-  opacity: 1;
-}
-
 .icon { width: 1em; height: 1em; vertical-align: -0.15em; fill: currentColor; overflow: hidden; }
 
 .wrapper { position: relative;}
-.topNavBar { position: fixed; width: 100%; z-index: 1; transition: all .6s; color: #b7b7b7;}
-.topNavBar-inner { padding: 20px 16px; }
-.topNavBar .logo { font-size: 24px; font-family: "Arial Black"; padding: 3px 0 4px 0; }
-.topNavBar .logo .rs { margin-right: 4px; color: #e6686a;}
+.topNavBar { position: fixed; width: 100%; z-index: 1; transition: all .3s; }
+.topNavBar-inner { padding: 20px 0px; display: flex; flex-direction: column; align-items: center; transition: all .3s;}
+.topNavBar .logo { font-size: 24px; font-family: "Arial Black"; transition: all .3s; }
+.topNavBar .logo .rs { color: #feca2a;}
 .topNavBar .logo .card { color: #9a9da2;}
-.topNavBar nav { float: right; padding-top: 4px; }
+.topNavBar nav { margin-top: 10px;}
 .topNavBar nav > ul { list-style: none; margin: 0; padding: 0; }
 .topNavBar nav > ul > li { float: left; margin: 0 17px; position: relative;}
-.topNavBar nav > ul > li > a { position: relative; font-size: 12px; font-weight: bold; color: inherit; 
+.topNavBar nav > ul > li > a { position: relative; font-size: 14px; font-weight: bold; color: #b7b7b7;
   border-bottom: 3px solid transparent; display: block; padding: 5px 0; }
-.topNavBar nav > ul > li.active > a::after,.topNavBar nav > ul > li.highlight > a::after { position: absolute; content: ''; display: block; width: 100%; height: 3px; 
- background-color: #e06567; bottom: -3px; animation: menuSlide .3s;}
+.topNavBar nav > ul > li.active > a::after,
+.topNavBar nav > ul > li.highlight > a::after { position: absolute; content: ''; display: block; width: 100%; height: 3px;
+ background-color: #feca2a; bottom: -3px; animation: menuSlide .3s;}
  @keyframes menuSlide {
     0% { width: 0; }
     100% { width: 100%; }
  }
 
-.topNavBar .submenu { display: none; position: absolute; top: 100%; right: 0; background-color: #fff; animation: submenu .3s; box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);}
+.topNavBar .submenu { display: none; position: absolute; top: 100%; right: 0; background-color: #fff; animation: submenu .3s;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.5); }
 @keyframes submenu {
-    0% {
-      margin-right: 100%;
-      opacity: 0.5;
-    }
-    100% {
-      margin-right: 0;
-      opacity: 1;
-    }
+    0% { margin-right: 100%; opacity: 0.5; }
+    100% { margin-right: 0; opacity: 1; }
 }
 .topNavBar li.active .submenu { display: block; }
 .topNavBar .submenu > li { white-space: nowrap; padding: 5px 10px;} /*  防止其中 a 标签里的文字换行  */
-.topNavBar .submenu > li a { color: #3d4451;}
+.topNavBar .submenu > li a { color: #3d4451; }
 
 .topNavBar.sticky .topNavBar-inner { padding: 10px 16px; }
-.topNavBar.sticky { background-color: #fff; box-shadow: 0 4px 12px 0px #666; color: #3d4451;}
+.topNavBar.sticky { background-color: #fff; box-shadow: 0 3px 5px 0px #ccc; }
+.topNavBar.sticky nav { margin-top: 3px;}
+.topNavBar.sticky nav > ul > li > a { color: #3d4451; }
+.topNavBar.sticky .logo { font-size: 20px;}
+
 
 .banner { height: 515px; background: url(img/wallpaper.jpg) center no-repeat; background-size: cover; }
 .wrapper main { margin-top: -340px; }
-.banner .mask { height: 515px; background-color: rgba(0,0,0,0.7);}
+.banner .mask { height: 515px; background-color: rgba(0,0,0,0.5);}
 
 .userCard { max-width: 940px; margin-left: auto; margin-right: auto; background-color: #fff; }
 .userCard .pictureAndText { padding: 57px 50px 15px 50px; }
 .userCard .picture { float: left; }
 
 .userCard .text { float: left; margin-left: 65px; width: 470px; }
-.userCard .welcome { background-color: #e6686a; color: #fff; display: inline-block; padding: 5px 15px; line-height: 21px; margin-bottom: 10px; position: relative; }
-.userCard .welcome .triangle { content: ''; position: absolute; width: 0; border: 10px solid transparent; border-top-color: #e6686a;
+.userCard .welcome { background-color: #feca2a; color: #fff; display: inline-block; padding: 5px 15px; line-height: 21px; margin-bottom: 10px; position: relative; }
+.userCard .welcome .triangle { content: ''; position: absolute; width: 0; border: 10px solid transparent; border-top-color: #feca2a;
 border-left-width: 0; left: 4px; top: 100%; }
 
 .userCard .text h1 { margin-top: 18px; margin-bottom: 8px;  }
@@ -71,12 +62,12 @@ border-left-width: 0; left: 4px; top: 100%; }
 
 .userCard dl dt,.userCard dl dd { float: left; padding: 8px 0; }
 .userCard dl dt { width: 30%; font-weight: bold; }
-.userCard dl dd { width: 70%; color: #9da0a7; }
+.userCard dl dd { width: 70%; color: #A3A29F; }
 
-.userCard > footer.media { background-color: #e6686a; text-align: center; }
+.userCard > footer.media { background-color: #feca2a; text-align: center; }
 .userCard > footer.media a { display: inline-block; color: #fff; width: 40px; line-height: 30px; padding: 5px 0; margin: 16px;
-border-radius: 50%; }
-.userCard > footer.media a:hover { background-color: #CF5D5F;}
+border-radius: 50%; transition: all .3s;}
+.userCard > footer.media a:hover { background-color: #DFBA46; transform: scale(1.1);}
 .userCard svg{ width: 30px; height: 30px;  fill: white; vertical-align: top; }
 
 .wrapper main .downloadResume-wrapper { text-align: center; }
@@ -87,7 +78,7 @@ display: inline-block; border-radius: 2px; color: #3d4451; font-weight: bold; ma
 .selfIntroduction { max-width: 940px; margin-left: auto; margin-right: auto; text-align: center; font-family: KaiTi; font-weight: bold;
 line-height: 1.8; font-size: 18px; }
 
-section.skills,section.portfolio,section.messageBoard { max-width: 940px; margin-left: auto; margin-right: auto; margin-top: 60px; }
+section.skills{ max-width: 940px; margin-left: auto; margin-right: auto; margin-top: 60px; }
 section.skills > h2,section.portfolio > h2,section.messageBoard h2 { text-align: center; color: #3d4451; font-size: 34px; line-height: 1.2; font-weight: 600;}
 section.skills ol  { background: #fff; box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5); padding: 42px 50px 10px; margin-top: 30px; }
 section.skills ol li { float: left; display: inline-block; vertical-align: top; width: 47%;}
@@ -95,25 +86,35 @@ section.skills ol li:nth-child(even) { float: right;}
 section.skills ol li h3 { font-size: 14px; line-height: 1.1; padding-right: 40px;}
 
 section.skills .progressBar { height: 5px; background: #FAE1E1; border-radius: 2px; margin: 4px 0 40px; overflow: hidden;}
-section.skills .progressBar > .progress { height: 100%; background: #E6686A; border-radius: 2px; transition: all 1s; transform: translateX(0);}
+section.skills .progressBar > .progress { height: 100%; background: #feca2a; border-radius: 2px; transition: all 1s; transform: translateX(0);}
 section.skills.offset .progressBar > .progress { transform: translateX(-100%); }
 
-section.portfolio {  text-align: center; margin-bottom: 100px; margin-top: 60px;}
+section.portfolio { max-width: 1200px; margin-left: auto; margin-right: auto; margin-bottom: 100px; margin-top: 60px;}
 section.portfolio h2 { margin-bottom: 32px; }
-section.portfolio .swiper-container { width: 800px; height: 400px; }
-.swiper-button-prev,.swiper-button-next { padding: 10px; border-radius: 5px; background-color: rgba(255,255,255,0.2); transition: all .5s;}
-.swiper-button-prev:hover,.swiper-button-next:hover { background-color: rgba(255,255,255,0.8); }
+section.portfolio .works { }
+section.portfolio .works > ol { display: flex; flex-wrap: wrap;}
+section.portfolio .works > ol > li { width: 33.3333%; padding: 16px;}
+section.portfolio .works > ol > li > a { display: block; width: 100%; height: 100%; position: relative; border-radius: 5px;
+  transition: all .3s;}
+section.portfolio .works > ol > li > a img { width: 100%; vertical-align: top; border-top-left-radius: 5px;
+ border-top-right-radius: 5px; }
+section.portfolio .works > ol > li > a .workTitle { padding: 16px 28px; background-color: #fff; border-bottom-left-radius: 5px;
+ border-bottom-right-radius: 5px; }
+section.portfolio .works > ol > li > a .workTitle h3 { font-size: 18px; padding-bottom: 12px;}
+section.portfolio .works > ol > li > a .workTitle p { font-size: 14px; color: #8E8F92;}
+section.portfolio .works > ol > li > a:hover { box-shadow: 0 0 15px 3px #aaa; transform: translateY(-6px);}
 
-section.messageBoard ol {
-  margin-top: 30px;
-  border-top: 1px solid #ccc;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-  border-radius: 3px;
-  background-color: #f3f3f3;
-}
-
-section.messageBoard ol li {
-  padding: 16px;
-  border-bottom: 1px solid #ccc;
-}
+section.messageBoard { margin-bottom: 100px; max-width: 860px; margin-left: auto; margin-right: auto; margin-top: 60px;}
+section.messageBoard h3 {padding: 36px 0 8px 0; margin-bottom: 10px;font-size: 24px; font-weight: bold; border-bottom: 1px solid #ccc;}
+section.messageBoard .postMessage textarea,section.messageBoard .postMessage input[type='text'] { width: 300px; padding: 8px;
+  font-size: 14px; background-color: #FBFBFB; border: 1px solid #eee;}
+section.messageBoard .postMessage textarea { width: 100%; height: 100px;}
+section.messageBoard .postMessage p { margin: 8px 0;}
+section.messageBoard .postMessage .submit {font-size: 14px; padding: 8px 24px; background-color: #feca2a; border-radius: 25px;
+  border: none; color: #fff; cursor: pointer; transition: all .3s; margin-left: 30px;}
+  section.messageBoard .postMessage .submit:hover { padding-left: 50px; padding-right: 50px;}
+section.messageBoard ol { margin-top: 30px; border-radius: 3px; background-color: #f7f7f7; }
+section.messageBoard ol li { padding: 12px 20px;}
+section.messageBoard ol li:nth-child(2n+1) { background-color: #FFF;}
+section.messageBoard ol li span { font-size: 16px; font-weight: bold;}
+section.messageBoard ol li p { font-size: 14px; color: #8E8F92; line-height: 30px; margin-top: 12px; text-indent: 1em;}
