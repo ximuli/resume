@@ -32,7 +32,7 @@
                 .start();
         },
         bindEvents: function() {
-            let aTags = this.view.querySelectorAll('.topNavBar nav > ul > li > a')
+            let aTags = this.view.querySelectorAll('.topNavBar nav > ul > li > a[href^="#"]') //只选取 href 属性以 # 开头的 a 标签
             for (let i = 0; i < aTags.length; i++) {
                 aTags[i].onclick =  (x) => {
                     x.preventDefault()  //阻止 a 链接的默认跳转动作

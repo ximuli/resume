@@ -104,3 +104,11 @@ section.messageBoard ol li { padding: 12px 20px;}
 section.messageBoard ol li:nth-child(2n+1) { background-color: #FFF;}
 section.messageBoard ol li span { font-size: 16px; font-weight: bold;}
 section.messageBoard ol li p { font-size: 14px; color: #8E8F92; line-height: 30px; margin-top: 12px; text-indent: 1em;}
+
+.footer { padding: 20px 0; text-align: center; color: #333; font-size: 14px;}
+.scrollToTop button {position: fixed; right: 20px;  background: #fff; border: none; border-radius: 4px; width: 40px; height: 40px;
+  box-shadow: 0 1px 3px rgba(26,26,26,.1); cursor: pointer; color: #666; transition: bottom .3s;}
+.scrollToTop:hover > button { background-color: #d3d3d3;}
+.scrollToTop button:focus {outline: none;}
+.scrollToTop button.show { bottom: 30px; }
+.scrollToTop button.hide { bottom: -60px;}
