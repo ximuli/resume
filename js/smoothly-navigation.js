@@ -18,7 +18,7 @@
         scrollToElement: function(element) {
             let top = element.offsetTop  // 元素到页面顶部的距离
             let currentTop = window.scrollY
-            let targetTop = top - 120
+            let targetTop = top - 100
             let s = targetTop - currentTop
             var coords = { y: currentTop }; // Start at (0, 0)
             var t = Math.abs((s/100)*300)
