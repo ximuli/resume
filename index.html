@@ -94,42 +94,42 @@
         </main>
         <section id="siteSkills" class="skills">
             <h2>技能</h2>
-            <ol class="clearfix">
+            <ol>
                 <li>
                     <h3>HTML5 &amp; CSS3</h3>
-                    <div class="progressBar">
-                        <div style="width: 60%;" class="progress"></div>
-                    </div>
-                </li>
-                <li>
-                    <h3>JavaScript</h3>
-                    <div class="progressBar">
-                        <div style="width: 80%;" class="progress"></div>
-                    </div>
+                    <p class="skill-details">
+                        了解 HTML 语义化，可以独立制作精美网页，掌握 CSS 3 动画、过渡效果、响应式等常用技术。
+                    </p>
                 </li>
                 <li>
                     <h3>jQuery</h3>
-                    <div class="progressBar">
-                        <div style="width: 80%;" class="progress"></div>
-                    </div>
+                    <p class="skill-details">
+                        熟悉 jQuery 的常用 API，能熟练使用 jQuery 制作网站、轮播、Tab 组件等。
+                    </p>
                 </li>
                 <li>
                     <h3>Vue</h3>
-                    <div class="progressBar">
-                        <div style="width: 60%;" class="progress"></div>
-                    </div>
+                    <p class="skill-details">
+                        熟悉 Vue 常用功能，如组件、Vue-Router、双向绑定等。
+                    </p>
                 </li>
                 <li>
-                    <h3>React</h3>
-                    <div class="progressBar">
-                        <div style="width: 80%;" class="progress"></div>
-                    </div>
+                    <h3>小程序制作</h3>
+                    <p class="skill-details">
+                        了解微信小程序，可以独立进行小程序开发，熟悉AAAA、BBB、CCCC相关API或组件的使用。
+                    </p>
+                </li>
+                <li>
+                    <h3>移动端</h3>
+                    <p class="skill-details">
+                        熟悉移动端开发，会使用 flexible.js、 REM、vw/vh 等技术制作适配手机设备的页面。
+                    </p>
                 </li>
                 <li>
                     <h3>HTTP</h3>
-                    <div class="progressBar">
-                        <div style="width: 90%;" class="progress"></div>
-                    </div>
+                    <p class="skill-details">
+                        了解 HTTP 网络协议，了解常见状态码。
+                    </p>
                 </li>
             </ol>
         </section>
@@ -165,6 +165,15 @@
                   </a>
                 </li>
                 <li>
+                    <a href="https://github.com/ximuli/Pikachu" target="_blank">
+                      <img src="./img/pikachu.jpg" alt="卡通形象-皮卡丘">
+                      <div class="workTitle">
+                        <h3>皮卡丘</h3>
+                        <p>关键字：CSS3、JS</p>
+                      </div>
+                    </a>
+                  </li>
+                <li>
                   <a href="" target="_blank">
                     <img src="./img/slide-demo.jpg" alt="作品-轮播">
                     <div class="workTitle">
@@ -174,23 +183,14 @@
                   </a>
                 </li>
                 <li>
-                  <a href="https://github.com/ximuli/nav-demo" target="_blank">
-                    <img src="./img/nav.jpg" alt="自定义导航">
-                    <div class="workTitle">
-                      <h3>自定义导航</h3>
-                      <p>关键字：JS</p>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://github.com/ximuli/Pikachu" target="_blank">
-                    <img src="./img/pikachu.jpg" alt="卡通形象-皮卡丘">
-                    <div class="workTitle">
-                      <h3>皮卡丘</h3>
-                      <p>关键字：CSS3、JS</p>
-                    </div>
-                  </a>
-                </li>
+                    <a href="https://github.com/ximuli/nav-demo" target="_blank">
+                      <img src="./img/nav.jpg" alt="自定义导航">
+                      <div class="workTitle">
+                        <h3>自定义导航</h3>
+                        <p>关键字：JS</p>
+                      </div>
+                    </a>
+                  </li>
               </ol>
             </div>
         </section>
@@ -227,11 +227,7 @@
     <script src="./js/message.js"></script>
     <script src="./js/scrollToTop.js"></script>
     <script type="text/javascript">
-      var slideUp = {
-        distance: '150%',
-        origin: 'bottom',
-        opacity: null
-      };
+      var slideUp = { distance: '150%', origin: 'bottom', opacity: null };
       ScrollReveal().reveal('.userCard', slideUp);
       ScrollReveal().reveal('section', slideUp);
     </script>

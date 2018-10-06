@@ -73,16 +73,15 @@ display: inline-block; border-radius: 2px; color: #3d4451; font-weight: bold; ma
 .selfIntroduction { max-width: 940px; margin-left: auto; margin-right: auto; text-align: center; font-family: KaiTi; font-weight: bold;
 line-height: 1.8; font-size: 18px; }
 
-section.skills{ max-width: 940px; margin-left: auto; margin-right: auto; margin-top: 60px; }
+section.skills{ max-width: 1100px; margin-left: auto; margin-right: auto; margin-top: 60px; }
 section.skills > h2,section.portfolio > h2,section.messageBoard h2 { text-align: center; color: #3d4451; font-size: 34px; line-height: 1.2; font-weight: 600;}
-section.skills ol  { background: #fff; box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5); padding: 42px 50px 10px; margin-top: 30px; }
-section.skills ol li { float: left; display: inline-block; vertical-align: top; width: 47%;}
-section.skills ol li:nth-child(even) { float: right;}
-section.skills ol li h3 { font-size: 14px; line-height: 1.1; padding-right: 40px;}
-
-section.skills .progressBar { height: 5px; background: #FAE1E1; border-radius: 2px; margin: 4px 0 40px; overflow: hidden;}
-section.skills .progressBar > .progress { height: 100%; background: #feca2a; border-radius: 2px; transition: all 1s; transform: translateX(0);}
-section.skills.offset .progressBar > .progress { transform: translateX(-100%); }
+section.skills ol  { padding: 42px; margin-top: 30px; 
+display: flex; flex-wrap: wrap; justify-content: space-between;}
+section.skills ol li { width: 49%; margin-bottom: 12px; background: #fff; border: 2px solid #fff; 
+border-radius: 3px; padding: 16px 20px; transition: all .3s ease;}
+section.skills ol li:hover {border-color: #feca2a;}
+section.skills ol li h3 { font-size: 18px; font-weight: bold; margin-bottom: 12px; cursor: default;}
+section.skills ol li p { line-height: 1.8; cursor: default;}
 
 section.portfolio { max-width: 1200px; margin-left: auto; margin-right: auto; margin-top: 60px;}
 section.portfolio h2 { margin-bottom: 32px; }
