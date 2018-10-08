@@ -57,10 +57,21 @@
     	},
     	saveMessage: function() {
     		let myForm = this.form
-            let name = myForm.querySelector('input[name=name]').value
-            let content = myForm.querySelector('textarea[name=content]').value
-			this.model.save(name, content).then(function(object) {
-                if (!name || !content) {
+            let name = myForm.querySelector('input[name=name]').value.trim()
+            let content = myForm.querySelector('textarea[name=content]').value.trim()
+            //增加一些简单的表单验证
+            let messageVerificationPrompt = myForm.querySelector('#message-verification-prompt')
+            let nameVerificationPrompt = myForm.querySelector('#name-verification-prompt')
+            if(nameVerificationPrompt.innerText) { nameVerificationPrompt.innerText = '' }
+            if(messageVerificationPrompt.innerText) { messageVerificationPrompt.innerText = '' }
+
+            this.model.save(name, content).then(function(object) {
+                if (!name) {
+                    nameVerificationPrompt.innerText = '内容不能为空'
+                    return
+                }
+                if (!content) {
+                    messageVerificationPrompt.innerText = '内容不能为空'
                     return
                 }
 		        let li = document.createElement('li')
