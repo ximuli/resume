@@ -5,10 +5,9 @@
     <title>栗靖伟的前端工程师简历</title>
     <link rel="stylesheet" href="./style.css">
     <script src="//at.alicdn.com/t/font_643702_bs92giimrxb.js"></script>
-    <script src="./js/lib/scrollreveal.js"></script>
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper" id="particles-js">
         <div id="topNavBar" class="topNavBar">
             <div class="topNavBar-inner clearfix">
                 <a class="logo" href="/"><span class="rs">L</span><span class="card">JW</span></a>
@@ -210,8 +209,11 @@
           </button>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
+
+    <script src="./js/lib/Tween.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.10.0/dist/av-min.js"></script>
+    <script src="./js/lib/scrollreveal.js"></script>
+    <script src="./js/lib/particles.min.js"></script>
     <!-- 模块化 -->
     <script src="./js/stiky-topbar.js"></script>
     <script src="./js/smoothly-navigation.js"></script>
@@ -219,9 +221,22 @@
     <script src="./js/message.js"></script>
     <script src="./js/scrollToTop.js"></script>
     <script type="text/javascript">
-      var slideUp = { distance: '150%', origin: 'bottom', opacity: null };
-      ScrollReveal().reveal('.userCard', slideUp);
-      ScrollReveal().reveal('section', slideUp);
+        var slideUp = { 
+            mobile: false,
+            distance: '50%', 
+            origin: 'bottom', 
+            opacity: 0, 
+            duration: 800,
+            easing: 'ease-in-out'
+        };
+        ScrollReveal().reveal('.userCard', slideUp);
+        ScrollReveal().reveal('section', slideUp);
+
+        //粒子背景
+        particlesJS.load('particles-js', './particlesjs-config.json', function() {
+            console.log('callback - particles.js config loaded');
+        });
+
     </script>
 </body>
 </html>
