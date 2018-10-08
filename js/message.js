@@ -40,21 +40,14 @@
     		this.bindEvents()
     	},
     	loadMessages: function() {
-		    this.model.fetch().then(
-		    	(messages) => {
-				    let array = messages.map((item) => item.attributes)
-				    array.forEach((item) => {
-				        let li = document.createElement('li')
-                let span = document.createElement('span')
-                let p = document.createElement('p')
-                span.innerText = `${item.name} 说:`
-                p.innerText = `${item.content}`
-				    	  li.appendChild(span)
-                li.appendChild(p)
-				    	  this.messageList.appendChild(li)
-				    })
-		        }
-		    )
+		    this.model.fetch().then( messages => {
+                let array = messages.map((item) => item.attributes)
+                array.forEach((item) => {
+                    let li = document.createElement('li')
+                    li.innerText = `${item.name} 说: ${item.content}`
+                    this.messageList.appendChild(li)
+                })
+		    })
     	},
     	bindEvents: function() {
 			this.form.addEventListener('submit', (e) => {
@@ -64,15 +57,17 @@
     	},
     	saveMessage: function() {
     		let myForm = this.form
-    		let name = myForm.querySelector('input[name=name]').value
-			  let content = myForm.querySelector('input[name=content]').value
-			  this.model.save(name, content).then(function(object) {
+            let name = myForm.querySelector('input[name=name]').value
+            let content = myForm.querySelector('textarea[name=content]').value
+			this.model.save(name, content).then(function(object) {
+                if (!name || !content) {
+                    return
+                }
 		        let li = document.createElement('li')
-		    	  li.innerText = `${object.attributes.name}说: ${object.attributes.content}`
-		    	  let messageList = document.querySelector('#messageList')
-		    	  messageList.appendChild(li)
-		    	  myForm.querySelector('input[name=content]').value = ''
-		        console.log(object)
+                li.innerText = `${object.attributes.name}说: ${object.attributes.content}`
+                let messageList = document.querySelector('#messageList')
+                messageList.appendChild(li)
+                myForm.querySelector('textarea[name=content]').value = ''
 		    })
     	}
     }
