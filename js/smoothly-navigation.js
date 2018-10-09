@@ -27,6 +27,15 @@
                 .to({ y: targetTop }, )
                 .easing(TWEEN.Easing.Quadratic.InOut)
                 .onUpdate(function() {
+                    //在移动端增加了浮层，这里需要处理掉
+                    if (document.querySelector('.menu')) { //通过判断这个按钮是否存在来判断是否在移动端设备
+                        let mobileMenu = document.querySelector('.menu')
+                        let overlay = document.querySelector('.overlay')
+                        mobileMenu.classList.remove('show')
+                        overlay.classList.remove('show')
+                        document.body.classList.remove('preventScroll')
+                    }
+
                     window.scrollTo(0,coords.y);
                 })
                 .start();
