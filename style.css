@@ -10,13 +10,14 @@ a { color: inherit; text-decoration: none;}
 
 .wrapper { position: relative; }
 .topNavBar { position: fixed; width: 100%; z-index: 1; transition: all .3s; }
-.topNavBar-inner { padding: 20px 0px; display: flex; flex-direction: column; align-items: center; transition: all .3s;}
+.topNavBar-inner { padding: 20px; display: flex; flex-direction: column; align-items: center; transition: all .3s;}
+.topNavBar-inner .mobile-btn { display: none;}
 .topNavBar .logo { font-size: 24px; font-family: "Arial Black"; transition: all .3s; }
 .topNavBar .logo .rs { color: #feca2a;}
 .topNavBar .logo .card { color: #9a9da2;}
 .topNavBar nav { margin-top: 10px;}
-.topNavBar nav > ul { list-style: none; margin: 0; padding: 0; }
-.topNavBar nav > ul > li { float: left; margin: 0 17px; position: relative;}
+.topNavBar nav > ul { list-style: none; margin: 0; padding: 0; display: flex; }
+.topNavBar nav > ul > li { margin: 0 17px;}
 .topNavBar nav > ul > li > a { position: relative; font-size: 14px; font-weight: bold; color: #b7b7b7;
   border-bottom: 3px solid transparent; display: block; padding: 5px 0; }
 @keyframes menuSlide { 0% { width: 0; } 100% { width: 100%; } }
@@ -35,17 +36,20 @@ a { color: inherit; text-decoration: none;}
 .wrapper main { margin-top: -370px; }
 .banner .mask { height: 515px; background-color: rgba(0,0,0,0.5);}
 
-.userCard { max-width: 940px; margin-left: auto; margin-right: auto; background-color: #fff; }
-.userCard .pictureAndText { padding: 57px 50px 15px 50px; }
-.userCard .picture { float: left; }
+.userCard { max-width: 940px; margin-left: auto; margin-right: auto; background-color: #fff; 
+    border-top-left-radius: 3px; border-top-right-radius: 3px;}
+.userCard .pictureAndText { padding: 6% 5.31% 1.6% 5.31%; display: flex; flex-wrap: wrap; }
+.userCard .picture { width: 35.71%;}
+.userCard .picture > img { width: 100%; min-width: 270px; max-width: 400px;}
 
-.userCard .text { float: left; margin-left: 65px; width: 470px; }
-.userCard .welcome { background-color: #feca2a; color: #fff; display: inline-block; padding: 5px 15px; line-height: 21px; margin-bottom: 10px; position: relative; }
+.userCard .text { margin-left:  7.73%; width: 56%;}
+.userCard .welcome { background-color: #feca2a; color: #fff; display: inline-block; padding: 5px 25px; line-height: 21px; margin-bottom: 10px; position: relative; }
 .userCard .welcome::after { content: ''; position: absolute; width: 0; border: 10px solid transparent; border-top-color: #feca2a;
 border-left-width: 0; left: 4px; top: 100%; }
 
-.userCard .text h1 { margin-top: 18px; margin-bottom: 8px;  }
-.userCard .text hr { margin: 20px 0; }
+.userCard .text h1 { margin-top: 12px; margin-bottom: 8px;  }
+.userCard .text p { line-height: 2;}
+.userCard .text hr { margin: 16px 0; }
 
 .userCard dl dt,.userCard dl dd { float: left; padding: 8px 0; }
 .userCard dl dt { width: 30%; font-weight: bold; }
@@ -67,8 +71,7 @@ border-radius: 50%; transition: all .3s; position: relative;}
 
 section.skills{ max-width: 1100px; margin-left: auto; margin-right: auto; margin-top: 60px; }
 section.skills > h2,section.portfolio > h2,section.messageBoard h2 { text-align: center; color: #3d4451; font-size: 34px; line-height: 1.2; font-weight: 600;}
-section.skills ol  { padding: 42px; margin-top: 30px; 
-display: flex; flex-wrap: wrap; justify-content: space-between;}
+section.skills ol  { padding: 42px 16px; margin-top: 30px; display: flex; flex-wrap: wrap; justify-content: space-between;}
 section.skills ol li { width: 49%; margin-bottom: 12px; background: #fff; border: 2px solid #fff; 
 border-radius: 3px; padding: 16px 20px; transition: all .3s ease;}
 section.skills ol li:hover {border-color: #feca2a;}
@@ -77,9 +80,8 @@ section.skills ol li p { line-height: 1.8; cursor: default;}
 
 section.portfolio { max-width: 1200px; margin-left: auto; margin-right: auto; margin-top: 60px;}
 section.portfolio h2 { margin-bottom: 32px; }
-section.portfolio .works { }
-section.portfolio .works > ol { display: flex; flex-wrap: wrap;}
-section.portfolio .works > ol > li { width: 33.3333%; padding: 16px;}
+section.portfolio .works > ol { display: flex; flex-wrap: wrap; justify-content: space-around;}
+section.portfolio .works > ol > li { width: 31%; margin-bottom: 2%; }
 section.portfolio .works > ol > li > a { display: block; width: 100%; height: 100%; position: relative; border-radius: 5px;
   transition: all .3s;}
 section.portfolio .works > ol > li > a img { width: 100%; vertical-align: top; border-top-left-radius: 5px;
@@ -91,7 +93,8 @@ section.portfolio .works > ol > li > a .workTitle p { font-size: 14px; color: #8
 section.portfolio .works > ol > li > a:hover { box-shadow: 0 0 15px 3px #aaa; transform: translateY(-6px);}
 
 section.messageBoard {margin-top: 60px; margin-bottom: 100px; max-width: 860px; margin-left: auto; margin-right: auto;}
-section.messageBoard h3 {padding: 36px 0 8px 0; margin-bottom: 10px;font-size: 24px; font-weight: bold; border-bottom: 1px solid #ccc;}
+section.messageBoard h3 {padding: 36px 16px 8px 16px; margin-bottom: 10px;font-size: 24px; font-weight: bold; border-bottom: 1px solid #ccc;}
+section.messageBoard .postMessage { padding-left: 16px; padding-right: 16px;}
 section.messageBoard .postMessage textarea,section.messageBoard .postMessage input[type='text'] { width: 300px; padding: 8px;
   font-size: 14px; background-color: #FBFBFB; border: 1px solid #eee;}
 section.messageBoard .postMessage textarea { width: 100%; height: 100px;}
@@ -115,3 +118,82 @@ footer.footer { padding: 20px 0; text-align: center; color: #333; font-size: 14p
 
 /* canvas 粒子背景 */
 .particles-js-canvas-el { position: absolute; top: 0; z-index: -1; }
+
+/* 遮罩层 */
+.overlay {
+    position: fixed;
+    z-index: 90;
+    top: -100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    transition: top 0s ease 0s, opacity 0.35s ease;
+    opacity: 0;
+}
+
+.overlay.show { top: 0; opacity: 0.7; }
+
+.preventScroll {
+    position: fixed;
+    width: 100%;
+}
+
+/* media */
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+
+} 
+@media only screen and (max-width: 768px) {
+    .wrapper { overflow: hidden;}
+    .userCard .picture { width: 100%; text-align: center;}
+    .userCard .text { width: 100%; margin-left: 0; margin-top: 10px; text-align: center;}
+    .topNavBar {position: unset;}
+    .topNavBar nav { margin-top: 0;}
+    .topNavBar-inner { flex-direction: row; justify-content: space-between;}
+    .topNavBar-inner .mobile-btn { display: block; border: 1px solid #4f5159; color: #feca2a; padding: 15px 20px;
+    background-color: #fff;
+    }
+    .topNavBar .logo { border: 1px solid green; }
+    .topNavBar-inner .menu {border: 1px solid blue; position: absolute; right: 0; top: 0; height: 100vh; 
+        transform: translateX(100%); transition: all .3s ease-in-out; background-color: #feca2a;
+        padding: 50px 20px;  z-index: 99;
+    }
+    .topNavBar-inner .menu.show { transform: translateX(0); }
+    .topNavBar-inner .menu ul { flex-direction: column;}
+    .topNavBar nav > ul > li > a { color: #fff;}
+} 
+@media only screen and (max-width: 992px) {
+    .userCard { margin-left: 16px; margin-right: 16px;}
+    section.portfolio .works > ol > li { width: 45%;}
+
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    section.skills ol { padding: 30px 10px; margin-top: 12px; justify-content: center;}
+    section.skills ol li { width: 98%;}
+
+    section.portfolio .works > ol { padding-left: 10px; padding-right: 10px; justify-content: center;}
+    section.portfolio .works > ol > li { width: 98%; margin-bottom: 20px;}
+    
+
+}

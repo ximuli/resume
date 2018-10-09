@@ -2,6 +2,7 @@
 <html lang="zh-hans">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>栗靖伟的前端工程师简历</title>
     <link rel="stylesheet" href="./style.css">
     <script src="//at.alicdn.com/t/font_643702_bs92giimrxb.js"></script>
@@ -9,10 +10,17 @@
 <body>
     <div class="wrapper" id="particles-js">
         <div id="topNavBar" class="topNavBar">
-            <div class="topNavBar-inner clearfix">
+            <div class="topNavBar-inner">
                 <a class="logo" href="/"><span class="rs">L</span><span class="card">JW</span></a>
+                <button class="mobile-btn">导航</button>
                 <nav class="menu">
-                    <ul class="clearfix">
+                    <ul>
+                        <li><a href="#siteAbout">关于</a></li>
+                        <li><a href="#siteSkills">技能</a></li>
+                        <li><a href="#siteWorks">作品</a></li>
+                        <li><a href="#messageBoard">留言板</a></li>
+                        <li><a href="http://blog.guozisha.com" target="_blank">个人博客</a></li>
+
                         <li><a href="#siteAbout">关于</a></li>
                         <li><a href="#siteSkills">技能</a></li>
                         <li><a href="#siteWorks">作品</a></li>
@@ -31,9 +39,10 @@
                     </div>
                     <div class="text">
                         <div class="profile">
-                            <span class="welcome">你好，我是一名前端开发工程师</span>
-                            <h1>栗靖伟</h1>
-                            <p>路漫漫其修远兮，吾将上下而求索。</p>
+                            <span class="welcome">你好</span>
+                            <h1>我叫栗靖伟</h1>
+                            <p>是一名前端开发工程师</p>
+                            <p>路漫漫其修远兮，吾将上下而求索</p>
                             <hr>
                             <dl >
                                 <dt>年龄</dt>
@@ -147,20 +156,20 @@
                   </a>
                 </li>
                 <li>
-                  <a href="https://github.com/ximuli/canvas" target="_blank">
-                    <img src="./img/canvas-demo.jpg" alt="canvas画板">
-                    <div class="workTitle">
-                      <h3>canvas画板</h3>
-                      <p>关键字：canvas、JS</p>
-                    </div>
-                  </a>
-                </li>
-                <li>
                     <a href="https://github.com/ximuli/Pikachu" target="_blank">
                       <img src="./img/pikachu.jpg" alt="卡通形象-皮卡丘">
                       <div class="workTitle">
                         <h3>皮卡丘</h3>
                         <p>关键字：CSS3、JS</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/ximuli/canvas" target="_blank">
+                      <img src="./img/canvas-demo.jpg" alt="canvas画板">
+                      <div class="workTitle">
+                        <h3>canvas画板</h3>
+                        <p>关键字：canvas、JS</p>
                       </div>
                     </a>
                   </li>
@@ -208,8 +217,11 @@
             </svg>
           </button>
         </div>
-    </div>
+        
+        <div class="overlay"></div>
 
+    </div>
+    
     <script src="./js/lib/Tween.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.10.0/dist/av-min.js"></script>
     <script src="./js/lib/scrollreveal.js"></script>
@@ -236,6 +248,25 @@
         particlesJS.load('particles-js', './particlesjs-config.json', function() {
             console.log('callback - particles.js config loaded');
         });
+        
+
+        //导航按钮点击事件
+        let moblieBtn = document.querySelector('.mobile-btn')
+        let mobileMenu = document.querySelector('.menu')
+        let overlay = document.querySelector('.overlay')
+        moblieBtn.addEventListener('click', function() {
+            mobileMenu.classList.add('show')
+            overlay.classList.add('show')
+            document.body.classList.add('preventScroll')
+
+        })
+        overlay.addEventListener('click', function() {
+            mobileMenu.classList.remove('show')
+            overlay.classList.remove('show')
+            document.body.classList.remove('preventScroll')
+        })
+        
+        
 
     </script>
 </body>
